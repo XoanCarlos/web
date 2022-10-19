@@ -8,3 +8,4 @@ class Cliente(models.Model):
     direccion = models.CharField(max_length=150, blank = False, null = True )
     mobile = models.CharField(max_length=150, blank = False, null = True)
 
+
