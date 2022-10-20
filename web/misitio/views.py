@@ -4,5 +4,5 @@ from django.utils import timezone
 # Create your views here.
 
 def clientes_list(request):
-    clientes = Cliente.objects.filter(published_date__lte=timezone.now()).order_by('fechalta')
+    clientes = Cliente.objects.filter(fechalta__lte=timezone.now()).order_by('fechalta')
     return render(request, 'misitio/clientes_list.html', {'clientes': clientes})
