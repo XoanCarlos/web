@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>MiSitio</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/misitio.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="page-header">
-    <h2><a href="/"> Página web de Proyectos</a></h2>
-</div>
+{% extends 'misitio/base.html' %}
+{% block content %}
 {% for cliente in clientes %}
   <p>_______________________________________________________________________________________________</p>
 <div class="content">
@@ -20,6 +7,6 @@
     <p>Dirección: {{ cliente.direccion }}    Móvil: {{ cliente.mobile }}</p>
 </div>
 {% endfor %}
-  <p>_______________________________________________________________________________________________</p>
-</body>
-</html>
+
+{% endblock %}
+
