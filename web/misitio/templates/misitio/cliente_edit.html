@@ -3,12 +3,10 @@
 <h3> NUEVO CLIENTE </h3>
   <p>_______________________________________________________________________________________________</p>
 <div class="content">
-    <form method="post" class="post-form> {% csrf_token %}"
-          {{ form.as_p }} >
-          <button type="submit" class="save btn btn-default"´>Guardar</button>
+    <form method="POST" > {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="save btn btn-default">Guardar</button>
     </form>
 </div>
-
-
 {% endblock %}
 

@@ -16,10 +16,11 @@
 .content{
     paddin-top: 20px;
     padding-left:20px;   /* margen a la izquierda*/
-    font-size:12px;
+    font-size:12pt;
     font-family: 'Calibre';
     }
 
 .dni{
     color:  #882818;
   }
+

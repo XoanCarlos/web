@@ -10,5 +10,11 @@ def clientes_list(request):
     return render(request, 'misitio/clientes_list.html', {'clientes': clientes})
 
 def cliente_new(request):
-    form = ClienteForm()
+    if request.method == 'POST':
+        form = ClienteForm(request.POST)
+        if form.is_valid():
+            cliente = form.save()
+            cliente.save()
+    else:
+        form = ClienteForm()
     return render(request, 'misitio/cliente_edit.html', {'form': form})
